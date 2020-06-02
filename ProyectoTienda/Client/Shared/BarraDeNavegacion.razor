@@ -1,0 +1,33 @@
+﻿<nav class="barra-navegacion">
+    <a class="logo" href="">
+        <img />
+        Logo
+    </a>
+    <input type="text" class="buscador" />
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="barra-navegacion-menu">
+        <li class="menu-item">
+            <NavLink class="carrito" href="">
+                <span class="oi oi-cart"></span>
+            </NavLink>
+        </li>
+        <li class="menu-item">
+            <NavLink class="usuario" href="">
+                <span class="oi oi-person" aria-hidden="true"></span>
+            </NavLink>
+        </li>
+    </ul>
+</nav>
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+

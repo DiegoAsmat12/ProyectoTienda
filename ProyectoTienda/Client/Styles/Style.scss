@@ -1,0 +1,42 @@
+﻿body {
+    display:flex;
+    flex-direction:column;
+    
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.navegacion-top {
+    width: 100%;
+    height: auto;
+    background: rgb(102,102,102);
+
+    .barra-navegacion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .buscador {
+            height: 20px;
+            width: 40%;
+            background-color: gainsboro;
+            border:none;
+        }
+
+        .barra-navegacion-menu {
+            display: inline-flex;
+            list-style: none;
+            height: 40px;
+            width: 20%;
+            justify-content: flex-start;
+            align-items: center;
+
+            .menu-item {
+                margin: auto 10px;
+                font-size: 40px;
+            }
+        }
+    }
+}
