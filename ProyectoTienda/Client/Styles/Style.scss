@@ -41,18 +41,18 @@ a{
             background-color: gainsboro;
             border-radius: 15px;
             padding: 10px;
-            display:flex;
-            align-items:center;
+            display: flex;
+            align-items: center;
 
             .buscador-texto {
                 border: none;
                 background: none;
                 outline: none;
                 float: left;
-                padding: 0;
+                padding: 10px;
                 color: black;
                 font-size: 16px;
-                width:95%;
+                width: 95%;
             }
 
             .buscador-boton {
@@ -77,6 +77,28 @@ a{
         .usuario {
             margin: auto 10px;
             font-size: 20px;
+
+            &:hover > .sub-menu-usuario {
+                display: flex;
+                flex-direction: column;
+                align-content:center;
+            }
+            .sub-menu-usuario {
+                list-style: none;
+                font-size: 15px;
+                display: none;
+                position:fixed;
+                height:auto;
+                width:auto;
+                background:$ColorBarraPrincipal;
+                color:gainsboro;
+                .item {
+                    margin:5px;
+                    display: flex;
+                    float: left;
+                    padding:10px;
+                }
+            }
         }
     }
 }
