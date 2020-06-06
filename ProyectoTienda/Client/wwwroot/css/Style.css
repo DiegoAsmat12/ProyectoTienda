@@ -6,7 +6,8 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #343434; }
+  background-color: #343434;
+  overflow-x: hidden; }
 
 app {
   display: flex;

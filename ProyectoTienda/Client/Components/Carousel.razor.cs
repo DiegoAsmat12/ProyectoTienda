@@ -8,6 +8,7 @@ namespace ProyectoTienda.Client.Components
 {
     public class CarouselBase:ComponentBase
     {
+        [Parameter] public List<string> ImageSource { get; set; } 
 
     }
 }

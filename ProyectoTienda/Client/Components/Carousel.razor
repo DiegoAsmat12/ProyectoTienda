@@ -1,4 +1,6 @@
-﻿<div class="carousel-contenedor" >
+﻿@inherits CarouselBase
+
+<div class="carousel-contenedor" >
     @for (int i = 1; i <= 5; i++)
     {
         if (i == 1)
@@ -6,7 +8,7 @@
             <input type="radio" id="img @i" name="images" checked="checked" />
 
             <div class="slide-img" id="@i">
-                <img src="Iconos/busqueda.png" />
+                <img src="@ImageSource[i-1]" />
                 <label class="prev" for="img 5"><span></span></label>
                 <label class="next" for="img @(i+1)"><span></span></label>
             </div>
@@ -17,7 +19,7 @@
             <input type="radio" id="img @(i)" name="images" />
 
             <div class="slide-img" id="@(i)">
-                <img src="Iconos/busqueda.png" />
+                <img src="@ImageSource[i-1]" />
                 <label class="prev" for="img @(i-1)"><span></span></label>
                 <label class="next" for="img 1"><span></span></label>
             </div>
@@ -26,7 +28,7 @@
         {
             <input type="radio" id="img @(i)" name="images" />
             <div class="slide-img" id="@(i)">
-                <img src="Iconos/Busqueda.png" />
+                <img src="@ImageSource[i-1]" />
                 <label class="prev" for="img @(i-1)"><span></span></label>
                 <label class="next" for="img @(i+1)"><span></span></label>
             </div>
