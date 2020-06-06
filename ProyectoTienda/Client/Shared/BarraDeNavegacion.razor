@@ -3,22 +3,23 @@
         <img />
         Logo
     </a>
-    <input type="text" class="buscador" />
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+    <div class="buscador">
+        <input type="text" class="buscador-texto" />
+        <a class="buscador-boton" href="">
+            <img src="Iconos/Busqueda.png"/>
+        </a>
+    </div>
+    
+    @*<button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <ul class="barra-navegacion-menu">
-        <li class="menu-item">
-            <NavLink class="carrito" href="">
-                <span class="oi oi-cart"></span>
-            </NavLink>
-        </li>
-        <li class="menu-item">
-            <NavLink class="usuario" href="">
-                <span class="oi oi-person" aria-hidden="true"></span>
-            </NavLink>
-        </li>
-    </ul>
+    </button>*@
+    <NavLink class="carrito" href="">
+        <span class="oi oi-cart">Carro</span>
+    </NavLink>
+    <NavLink class="usuario" href="">
+        <span class="oi oi-person" aria-hidden="true">Usuario</span>
+    </NavLink>
+
 </nav>
 @code {
     private bool collapseNavMenu = true;

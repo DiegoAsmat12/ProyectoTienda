@@ -1,42 +1,101 @@
-﻿body {
-    display:flex;
-    flex-direction:column;
-    
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+$ColorBarraPrincipal:#111111;
+$ColorFondo:#343434;
+
+*{
+    margin:0;
+    padding:0;
 }
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $ColorFondo;
+}
+app {
+    display: flex;
+    flex-direction: column;
+    height: 5000px;
+}
+
 a{
     text-decoration:none;
-    color:black;
+    color:gainsboro;
 }
 .navegacion-top {
     width: 100%;
-    height: auto;
-    background: rgb(102,102,102);
+    height: 40px;
+    background: $ColorBarraPrincipal;
+    position: fixed;
 
     .barra-navegacion {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+        height: 100%;
 
         .buscador {
-            height: 20px;
+            height: 10px;
             width: 40%;
             background-color: gainsboro;
-            border:none;
-        }
+            border-radius: 15px;
+            padding: 10px;
+            display:flex;
+            align-items:center;
 
-        .barra-navegacion-menu {
-            display: inline-flex;
-            list-style: none;
-            height: 40px;
-            width: 20%;
-            justify-content: flex-start;
-            align-items: center;
+            .buscador-texto {
+                border: none;
+                background: none;
+                outline: none;
+                float: left;
+                padding: 0;
+                color: black;
+                font-size: 16px;
+                width:95%;
+            }
 
-            .menu-item {
-                margin: auto 10px;
-                font-size: 40px;
+            .buscador-boton {
+                text-decoration: none;
+                color: gray;
+                float: right;
+                width: 5%;
+                height: 20px;
+                border-radius: 50%;
+                background: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
+
+        .carrito {
+            margin: auto 10px;
+            font-size: 20px
+        }
+
+        .usuario {
+            margin: auto 10px;
+            font-size: 20px;
+        }
     }
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
 }
