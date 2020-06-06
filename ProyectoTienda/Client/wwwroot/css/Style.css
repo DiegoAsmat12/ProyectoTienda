@@ -1,5 +1,4 @@
-﻿@import url("../../Styles/open-iconic/font/css/open-iconic-bootstrap.min.css");
-* {
+﻿* {
   margin: 0;
   padding: 0; }
 
@@ -32,7 +31,7 @@ a {
     .navegacion-top .barra-navegacion .buscador {
       height: 10px;
       width: 40%;
-      background-color: gainsboro;
+      background-color: whitesmoke;
       border-radius: 15px;
       padding: 10px;
       display: flex;

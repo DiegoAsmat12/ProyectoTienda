@@ -1,4 +1,4 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿
 $ColorBarraPrincipal:#111111;
 $ColorFondo:#343434;
 
@@ -38,7 +38,7 @@ a{
         .buscador {
             height: 10px;
             width: 40%;
-            background-color: gainsboro;
+            background-color: whitesmoke;
             border-radius: 15px;
             padding: 10px;
             display: flex;
@@ -92,6 +92,7 @@ a{
                 width:auto;
                 background:$ColorBarraPrincipal;
                 color:gainsboro;
+
                 .item {
                     margin:5px;
                     display: flex;
