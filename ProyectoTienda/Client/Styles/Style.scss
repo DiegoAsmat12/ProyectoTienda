@@ -1,10 +1,13 @@
 ﻿
 $ColorBarraPrincipal:#111111;
 $ColorFondo:#343434;
+$SombraDropDownMenu: 0px 8px 16px 0px rgba(0,0,0,0.2);
+$ColorBarraSecundaria:#222222;
 
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box
 }
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,7 +32,7 @@ a{
     height: 40px;
     background: $ColorBarraPrincipal;
     position: sticky;
-    top:0px;
+    top: 0px;
 
     .barra-navegacion {
         display: flex;
@@ -38,8 +41,13 @@ a{
         align-items: center;
         height: 100%;
 
+        .logo{
+            &:hover{
+                color:white;
+            }
+        }
         .buscador {
-            height: 10px;
+            height: 30px;
             width: 40%;
             background-color: whitesmoke;
             border-radius: 15px;
@@ -74,40 +82,110 @@ a{
 
         .carrito {
             margin: auto 10px;
-            font-size: 20px
+            font-size: 20px;
+            cursor:pointer;
+            &:hover{
+                color:white;
+            }
         }
 
         .usuario {
             margin: auto 10px;
             font-size: 20px;
-
-            &:hover > .sub-menu-usuario {
-                display: flex;
-                flex-direction: column;
-                align-content:center;
+            cursor:pointer;
+            &:hover{
+                color:white;
             }
+            &:hover > .sub-menu-usuario {
+                display: block;
+            }
+
             .sub-menu-usuario {
                 list-style: none;
                 font-size: 15px;
                 display: none;
-                position:absolute;
-                height:auto;
-                width:auto;
-                background:$ColorBarraPrincipal;
-                color:gainsboro;
+                position: absolute;
+                height: auto;
+                width: auto;
+                background: $ColorBarraPrincipal;
+                box-shadow: $SombraDropDownMenu;
+                z-index:1;
 
                 .item {
-                    margin:5px;
-                    display: flex;
-                    float: left;
-                    padding:10px;
+                    display: block;
+                    float: none;
+                    text-align:left;
+                    padding: 10px;
+                    width:100%;
+
+                    &:hover {
+                        background-color: #222222;
+                    }
                 }
+
             }
+            
         }
     }
 }
 
 //Carousel
+.carousel-contenedor{
+    margin:0 auto;
+    position:relative;
+    width:100%;
+    height:0;
+    user-select:none;
+
+}
+//BarraDeCategorias
+
+.barra-categorias {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $ColorBarraSecundaria;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    bottom: 0px;
+    flex-wrap:wrap;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: transparent;
+        border: none;
+        flex-grow: 1;
+        cursor: pointer;
+        height: 80px;
+
+        .navegacion {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            h6 {
+                color: gainsboro;
+                font-size: 12px;
+            }
+        }
+
+
+        &:hover {
+            background: #444444;
+            color: white;
+        }
+        
+    }
+}
 
 
 //Manejando Errores
