@@ -33,7 +33,7 @@ a{
     background: $ColorBarraPrincipal;
     position: sticky;
     top: 0px;
-
+    z-index:1000;
     .barra-navegacion {
         display: flex;
         flex-wrap: wrap;
@@ -143,12 +143,49 @@ a{
         user-select: none;
     }
 }
+//CartaDeProducto
+.cartadeproducto-contenedor {
+    position: relative;
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #232323;
+    box-shadow: $SombraDropDownMenu;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: -1;
+    overflow: hidden;
 
+    .cartadeproducto-imagen {
+        height: 70%;
+        width: 100%;
+    }
+
+    .cartadeproducto-descripcion::before {
+        content: "";
+        height: 0px;
+        width: 80%;
+        border: 1px solid;
+    }
+
+    .cartadeproducto-descripcion {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+        width: 100%;
+    }
+}
 //BarraDeCategorias
 .navegador-categorías {
     height: auto;
     width: 100%;
-
+    z-index:1000;
     .barra-categorias {
         margin: 0 auto;
         display: flex;

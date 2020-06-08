@@ -1,0 +1,28 @@
+﻿@inherits CartaDeProductoBase
+
+<div class="cartadeproducto-contenedor">
+    <a>
+        <div class="cartadeproducto-imagen">
+            <img src="@RutaImagenProducto" alt="@NombreProducto"/>
+        </div>
+        <div class="cartadeproducto-descripcion">
+            <div class="cartadeproducto-nombre">
+                @NombreProducto
+            </div>
+            <div class="cartadeproducto-precio-normal">
+                @PrecioOriginalProducto
+            </div>
+            @if (TieneDescuento)
+            {
+                <div class="cartadeproducto-descuento">
+                    @Descuento
+                </div>
+                <div>
+                    <div class="cartadeproducto-precio-final">
+                        @PrecioFinal
+                    </div>
+                </div>
+            }
+        </div>
+    </a>
+</div>
