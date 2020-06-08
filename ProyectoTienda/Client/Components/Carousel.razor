@@ -5,32 +5,32 @@
     {
         if (i == 1)
         {
-            <input type="radio" id="img @i" name="images" checked="checked" />
+            <input type="radio" id="i@i" name="images" checked />
 
             <div class="slide-img" id="@i">
                 <img src="@ImageSource[i-1]" />
-                <label class="prev" for="img 5"><span></span></label>
-                <label class="next" for="img @(i+1)"><span></span></label>
+                <label class="prev" for="i5"><span></span></label>
+                <label class="next" for="i@(i+1)"><span></span></label>
             </div>
 
         }
         else if (i == 5)
         {
-            <input type="radio" id="img @(i)" name="images" />
+            <input type="radio" id="i@(i)" name="images" />
 
             <div class="slide-img" id="@(i)">
                 <img src="@ImageSource[i-1]" />
-                <label class="prev" for="img @(i-1)"><span></span></label>
-                <label class="next" for="img 1"><span></span></label>
+                <label class="prev" for="i@(i-1)"><span></span></label>
+                <label class="next" for="i1"><span></span></label>
             </div>
         }
         else
         {
-            <input type="radio" id="img @(i)" name="images" />
+            <input type="radio" id="i@(i)" name="images" />
             <div class="slide-img" id="@(i)">
                 <img src="@ImageSource[i-1]" />
-                <label class="prev" for="img @(i-1)"><span></span></label>
-                <label class="next" for="img @(i+1)"><span></span></label>
+                <label class="prev" for="i@(i-1)"><span></span></label>
+                <label class="next" for="i@(i+1)"><span></span></label>
             </div>
         }
 
@@ -40,7 +40,7 @@
     <div id="nav_slide">
         @for (int i = 1; i <= 5; i++)
         {
-            <label for="img @(i)" class="dots" id="dot @(i)"></label>
+            <label for="img@(i)" class="dots" id="dot@(i)"></label>
         }
     </div>
 

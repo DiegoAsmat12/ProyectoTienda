@@ -1,10 +1,11 @@
 ﻿@page "/"
 
-<Carousel ImageSource="ImageSource"></Carousel>
-
-
-<BarraDeCategorias></BarraDeCategorias>
-
+    @*<div class="carousel-principal">
+        <Carousel ImageSource="ImageSource"></Carousel>
+    </div>*@
+    <div class="navegador-categorías">
+        <BarraDeCategorias></BarraDeCategorias>
+    </div>
 
 @code{
     private List<string> ImageSource { get; set; }

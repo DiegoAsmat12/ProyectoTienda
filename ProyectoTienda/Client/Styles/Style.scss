@@ -130,62 +130,71 @@ a{
 }
 
 //Carousel
-.carousel-contenedor{
-    margin:0 auto;
-    position:relative;
+.carousel-principal {
+    height:auto;
     width:100%;
-    height:0;
-    user-select:none;
-
+    .carousel-contenedor {
+        margin: 0 auto;
+        position: static;
+        width: 100%;
+        height: 600px;
+        user-select: none;
+        background-color: #404040;
+        user-select: none;
+    }
 }
-//BarraDeCategorias
 
-.barra-categorias {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: $ColorBarraSecundaria;
-    position: fixed;
+//BarraDeCategorias
+.navegador-categorías {
     height: auto;
     width: 100%;
-    bottom: 0px;
-    flex-wrap:wrap;
 
-    .item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .barra-categorias {
         margin: 0 auto;
-        background-color: transparent;
-        border: none;
-        flex-grow: 1;
-        cursor: pointer;
-        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: $ColorBarraSecundaria;
+        position: fixed;
+        height: auto;
+        width: 100%;
+        bottom: 0px;
 
-        .navegacion {
+        .item {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
+            margin: 0 auto;
+            background-color: transparent;
+            border: none;
+            flex-grow: 1;
+            cursor: pointer;
+            height: 80px;
 
-            h6 {
-                color: gainsboro;
-                font-size: 12px;
+            .navegacion {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+                h6 {
+                    color: gainsboro;
+                    font-size: 12px;
+                }
+            }
+
+
+            &:hover {
+                background: #444444;
+                color: white;
             }
         }
-
-
-        &:hover {
-            background: #444444;
-            color: white;
-        }
-        
     }
 }
+
 
 
 //Manejando Errores
