@@ -1,21 +1,36 @@
 ﻿@page "/"
 
-    <div class="carousel-principal">
-        <Carousel ImageSource="ImageSource"></Carousel>
+<div class="carousel-principal">
+    <Carousel ImageSource="ImageSource"></Carousel>
+</div>
+<br />
+<br />
+<br />
+<br />
+@for (int i = 1; i <= 5; i++)
+{
+    <div class="caja-productos">
+        <div class="cartadeproducto-titulo" id="@i">
+            Titulo de seccion:
+        </div>
+        @for (int j = 1; j <= 14; j++)
+        {
+            <CartaDeProducto TieneDescuento="true" PrecioOriginalProducto="$20" NombreProducto="Nombre del producto" RutaImagenProducto="Iconos/HarinaEjemplo.png" Descuento="10%" PrecioFinal="$18"></CartaDeProducto>
+        }
     </div>
-    <div class="navegador-categorías">
-        <BarraDeCategorias></BarraDeCategorias>
-    </div>
-    <div>
-        <CartaDeProducto TieneDescuento="false" PrecioOriginalProducto="$20" NombreProducto="Nombre" RutaImagenProducto="Iconos/Busqueda.png"></CartaDeProducto>
-    </div>
+}
+
+<div class="navegador-categorías">
+    <BarraDeCategorias></BarraDeCategorias>
+</div>
+
 
 @code{
     private List<string> ImageSource { get; set; }
     protected override void OnInitialized()
     {
         ImageSource = new List<string>()
-        {
+    {
             "Iconos/Busqueda.png",
             "Iconos/Busqueda.png",
             "Iconos/Busqueda.png",

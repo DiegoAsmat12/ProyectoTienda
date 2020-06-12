@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using ProyectoTienda.Shared.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,6 @@ namespace ProyectoTienda.Client.Components
 {
     public class CartaDeProductoBase:ComponentBase
     {
-        [Parameter] public string RutaImagenProducto { get; set; }
-        [Parameter] public string NombreProducto { get; set; }
-        [Parameter] public string PrecioOriginalProducto { get; set; }
-        [Parameter] public bool TieneDescuento { get; set; }
-        [Parameter] public string Descuento { get; set; }
-        [Parameter] public string PrecioFinal { get; set; }
+        [Parameter] public Producto Producto { get; set; }
     }
 }

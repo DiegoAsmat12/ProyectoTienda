@@ -1,28 +1,32 @@
 ﻿@inherits CartaDeProductoBase
 
 <div class="cartadeproducto-contenedor">
-    <a>
+    <NavLink class="cartadeproducto-cuerpo" href="counter">
         <div class="cartadeproducto-imagen">
-            <img src="@RutaImagenProducto" alt="@NombreProducto"/>
+            <img src="@Producto.RutaImagenProducto" alt="@Producto.NombreProducto" />
         </div>
         <div class="cartadeproducto-descripcion">
             <div class="cartadeproducto-nombre">
-                @NombreProducto
+                @Producto.NombreProducto
             </div>
-            <div class="cartadeproducto-precio-normal">
-                @PrecioOriginalProducto
-            </div>
-            @if (TieneDescuento)
-            {
-                <div class="cartadeproducto-descuento">
-                    @Descuento
+            <div class="cartadeproducto-precio">
+                <div class="cartadeproducto-precio-normal">
+                    @Producto.PrecioOriginalProducto
                 </div>
-                <div>
-                    <div class="cartadeproducto-precio-final">
-                        @PrecioFinal
+                @if (Producto.Descuento!=null)
+                {
+                    <div class="cartadeproducto-descuento">
+                        @Producto.Descuento
                     </div>
-                </div>
-            }
+                    <div>
+                        <div class="cartadeproducto-precio-final">
+                            @Producto.PrecioFinal
+                        </div>
+                    </div>
+                }
+            </div>
+            
         </div>
-    </a>
+    </NavLink>
+        
 </div>
